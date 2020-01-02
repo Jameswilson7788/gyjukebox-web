@@ -9,7 +9,7 @@ const SearchBar = props => {
   const [q, setQ] = React.useState("");
 
   const _onSearchButtonClick = e => {
-    e.preventDefault();
+    e.stopPropagation();
 
     onSearchButtonClick && onSearchButtonClick(q);
   };
